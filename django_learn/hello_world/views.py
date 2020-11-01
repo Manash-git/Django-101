@@ -5,5 +5,5 @@ from django.http import HttpResponse
 
 def home(request):
     # return HttpResponse("<h1>Hello World</h1>")
-    return render(request,'index.html')
-    # return render(request,'index.html',{'name':'manash mondal'})
+    # return render(request,'index.html')
+    return render(request,'index.html',{'name':'manash mondal'})
