@@ -143,7 +143,8 @@
                 <div class="product">
                     <!-- <img src="{% static './images/product-1.jpeg' %}" alt="product-1" class="product-img"> -->
                     
-                    <img src="{{imagedir}}/{{i.img}}" alt="product-1" class="product-img">
+                    <!-- <img src="{{imagedir}}/{{i.img}}" alt="product-1" class="product-img"> -->
+                    <img src="{{i.img.url}}" alt="product-1" class="product-img">
 
 
                     <h3 class="product-title">{{i.title}}</h3>

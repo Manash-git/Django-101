@@ -5,7 +5,12 @@ from .models import Product
 # Create your views here.
 
 def home(request):
+    # load data from database
+    prdcts = Product.objects.all()
     
+    
+    # below for load data from pc
+    '''
     p1 = Product()
     p1.title = "Sunflower tea"
     p1.price = 70
@@ -25,7 +30,7 @@ def home(request):
     p3.offer = True
     
     prdcts = [p1,p2,p3]
-    
+    '''
     # return HttpResponse("<h1>Hello World</h1>")
     # return render(request,'index.html')
     return render(request,'index.html',{"prdcts":prdcts}) 
