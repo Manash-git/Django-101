@@ -1,4 +1,7 @@
 {% load static %}
+{% static "images" as imagedir %}
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -134,12 +137,28 @@
                 <a href="products.html" class="common-btn">inventory</a>
             </article>
             <article class="products-collection clearfix">
+
+            {% for i in prdcts %}
+
                 <div class="product">
-                    <img src="{% static './images/product-1.jpeg' %}" alt="product-1" class="product-img">
-                    <h3 class="product-title">{{p1.title}}</h3>
-                    <h3 class="product-price">{{p1.price}}$</h3> 
+                    <!-- <img src="{% static './images/product-1.jpeg' %}" alt="product-1" class="product-img"> -->
+                    
+                    <img src="{{imagedir}}/{{i.img}}" alt="product-1" class="product-img">
+
+
+                    <h3 class="product-title">{{i.title}}</h3>
+                    <h3 class="product-price">{{i.price}}$</h3>
+
+                    {% if i.offer %}
+                        <P class="common-btn">Offer</P>
+                    {% endif %}
+
                 </div>
-                <div class="product">
+
+            {% endfor %} 
+
+
+                <!-- <div class="product">
                     <img src="{% static './images/product-2.jpeg' %}" alt="product-3" class="product-img">
                     <h3 class="product-title">Product Title</h3>
                     <h3 class="product-price">10.99$</h3>
@@ -148,7 +167,10 @@
                     <img src="{% static './images/product-3.jpeg' %}" alt="product-3" class="product-img">
                     <h3 class="product-title">Product Title</h3>
                     <h3 class="product-price">10.99$</h3>
-                </div>
+                </div> -->
+
+
+
             </article>
         </div>
     </section>

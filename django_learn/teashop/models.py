@@ -6,4 +6,6 @@ class Product:
     id: int
     title: str
     price: int 
+    img: str
+    offer: bool
     
