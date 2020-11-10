@@ -23,6 +23,7 @@ urlpatterns = [
     # path('',include('hello_world.urls')),
     path('',include('teashop.urls')),
     path('admin/', admin.site.urls),
+    path('user/',include('user.urls'))
 ]
 
 urlpatterns = urlpatterns + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
