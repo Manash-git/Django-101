@@ -33,8 +33,7 @@ h1 {
 
 input[type="text"],
 input[type="email"],
-input[type="tel"],
-textarea {
+input[type="password"]{
     width: 70%;
     padding: 11px;
     border: 3.5px solid #f18973;
@@ -46,16 +45,14 @@ textarea {
 
 input[type="text"]:focus,
 input[type="email"]:focus,
-input[type="tel"]:focus,
-textarea:focus {
+input[type="password"]:focus {
     outline: none;
     border-color: #6ebe44;
 }
 
 input[type="text"]:placeholder-shown,
 input[type="email"]:placeholder-shown,
-input[type="tel"]:placeholder-shown,
-textarea {
+input[type="password"]:placeholder-shown {
     /*    color: #b14236;*/
     /*    caret-color: blue;*/
     font-size: 16px;
