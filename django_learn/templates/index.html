@@ -34,8 +34,19 @@
             <h3 class="banner-subtitle">Over hundred flavours of tea</h3>
             <h1 class="banner-title">specially crafted tea</h1>
             <!-- <a href="#" class="banner-btn">explore</a> -->
-            <a class="banner-btn" href="user/register">Register</a>
-            <a class="banner-btn" href="user/login">login</a>
+
+        <!--start Making dynamic for user different views -->
+
+           {% if user.is_authenticated %}
+                <h1 class="banner-title"> Hello, {{user.first_name}}</h1><br>
+                <a class="banner-btn" href="user/logout" >Logout</a>
+           {% else %}
+                <a class="banner-btn" href="user/register">Register</a>
+                <a class="banner-btn" href="user/login">login</a>
+
+            {% endif %}
+
+        <!--end of Making dynamic for user different views -->
         </div>
     </header>
     <!-- End Header Banner -->

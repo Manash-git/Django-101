@@ -84,6 +84,10 @@ a {
 }
 
 /* Banner */
+
+.user-name {
+    color:var(--mateGreen);
+}
 .banner-text {
     position: absolute;
     top: 50%;
@@ -100,6 +104,7 @@ a {
     font-family: var(--curlFont);
     animation: slide-left 4s ease-in-out 1;
 }
+
 
 .banner-title {
 
