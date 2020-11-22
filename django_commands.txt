@@ -1,0 +1,7 @@
+pip install django
+django_admin startproject myproject_name
+python manage.py runserver
+python manage.py startapp myapp_name
+
+python manage.py makemigrations
+python manage.py migrate
